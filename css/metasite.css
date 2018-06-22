@@ -1,6 +1,6 @@
 @import url("reset.css");
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .wrapper {
@@ -26,8 +26,7 @@ nav {
 
 nav {
   text-align: center;
-  margin: 20px 0 0;
-  padding: 10px 0;
+  margin: 20px 0 0 0;
 }
 
 nav ul {
@@ -38,18 +37,14 @@ nav ul {
 
 nav li {
   display: inline-block;
-  padding: 5px 5px;
+  padding: 10px 5px;
+  list-style: none;
 }
 
 nav a {
   font-weight: normal;
-  padding: 10px 5px;
+  padding: 20px 5px;
   font-size: .80em;
-}
-
-nav li {
-  display: inline;
-  list-style: none;
 }
 
 nav a:link, a:visited {
@@ -58,7 +53,6 @@ nav a:link, a:visited {
 }
 
 nav a:hover, a:active {
-  text-decoration: underline;
   background-color: #111;
   color: #228833;
 }
@@ -136,6 +130,10 @@ section {
   align-content: space-between;
 }
 
+#sitemapwrapper a:hover, a:active {
+  box-shadow: -2px 2px #111;
+}
+
 #rationale {
   background-color: #111;
 }
@@ -152,6 +150,7 @@ section {
   width: 25%;
   border: 1px solid #aaa;
   margin: 3px 2px;
+  padding-bottom: 5px;
   background-color: #fff;
   color: #111;
   text-align: left;
@@ -165,4 +164,89 @@ section {
 #rationalewrapper div p {
   padding: 2px 5px 0 5px;
   font-size: 0.8em;
+}
+
+footer {
+  padding: 0 0 5px 0;
+}
+
+footer a:link, a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover, a:active {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+  header h1 {
+    font-size: 0.8em;
+  }
+  nav, section, footer {
+    font-size: 0.8em;
+  }
+  nav {
+    background-color: #111;
+  }
+  nav li {
+    padding: 0;
+  }
+  nav ul li {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  nav ul li a {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #228833;
+  }
+  #teammemberssub div {
+    width: 50%;
+    font-size: 0.9em;
+  }
+  #teammemberssub, #rationalewrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #rationalewrapper div {
+    width: 60%;
+  }
+}
+
+@media print {
+  header h1 {
+    font-size: 0.8em;
+    color: #111;
+  }
+  nav, section, footer {
+    font-size: 0.8em;
+    color: #111;
+  }
+  nav, footer {
+    display: none;
+  }
+  #teammemberssub a, #sitemap a {
+    text-decoration: underline;
+    color: #111;
+  }
+  #teammemberssub, #rationalewrapper {
+    display: flex;
+    flex-direction: row;
+    color: #111;
+  }
+  #rationale {
+    page-break-before: always;
+  }
+  #teammemberssub div {
+    font-size: 0.8em;
+    width: 40%;
+    background-color: #fff;
+    color: #111;
+    box-shadow: none;
+    text-align: left;
+  }
 }
