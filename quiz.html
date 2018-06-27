@@ -5,96 +5,153 @@ Author: Mark & Ladan
 -->
 	<head>
 		<meta charset="utf-8">		
-		<title>Comp 1950 | Quiz</title>
+        <title>Comp 1950 | Quiz</title>
+        <link rel="stylesheet" href="css/prototype.css">
 	</head>
 	<body>
-		<form action="" method="post" id="quiz">
-            <ol>
-                <li>
-                    <h3>Here is a question with multiple choice answers. Pick one.</h3>
-                    <div>
-                        <input type="radio" name="q1answers" id="q1answera" value="A" />
-                        <label for="q1answera">A. Option 1</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="q1answers" id="q1answerb" value="B" />
-                        <label for="q1answerb">B. Option 2</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="q1answers" id="q1answerc" value="C" />
-                        <label for="q1answerc">C. Option 3</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="q1answers" id="q1answerd" value="D" />
-                        <label for="q1answerd">D. Option 4</label>
-                    </div>
-                    <button type="button" onclick="">Save Answer</button>
-                </li>
-                <li name="question2">
-                    <h3>Here is a multipick list. Pick up to three choices.</h3>
-                    <div>
-                        <input type="checkbox" name="q2answers1" onClick="return KeepCount()" value="A">Option 1<br>
-                        <input type="checkbox" name="q2answers2" onClick="return KeepCount()" value="B">Option 2<br>
-                        <input type="checkbox" name="q2answers3" onClick="return KeepCount()" value="C">Option 3<br>
-                        <input type="checkbox" name="q2answers4" onClick="return KeepCount()" value="D">Option 4<br>
-                        <input type="checkbox" name="q2answers5" onClick="return KeepCount()" value="E">Option 5<br>
-                        <input type="checkbox" name="q2answers6" onClick="return KeepCount()" value="F">Option 6<br>
-                        <input type="checkbox" name="q2answers7" onClick="return KeepCount()" value="G">Option 7<br>
-                    </div>
-                    <button type="button" onclick="">Save Answer</button>
-                </li>
-                <li>
-                    <h3>Fill in the blank. I am answering a _____________ </h3>
-                    <input type"text" name="q3answer"><br>
-                    <button type="button" onclick="">Save Answer</button>
-                </li>
-                <li>
-                    <h3>Here is a question with multiple choice answers. Pick one.</h3>
-                    <div>
-                        <input type="radio" name="q4answers" id="q4answera" value="A" />
-                        <label for="q4answera">A. Option 1</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="q4answers" id="q4answerb" value="B" />
-                        <label for="q4answerb">B. Option 2</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="q4answers" id="q4answerc" value="C" />
-                        <label for="q4answerc">C. Option 3</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="q4answers" id="q4answerd" value="D" />
-                        <label for="q4answerd">D. Option 4</label>
-                    </div>
-                    <button type="button" onclick="">Save Answer</button>
-                </li>
-                <li>
-                    <h3>Here is a question with multiple choice answers. Pick one.</h3>
-                    <div>
-                        <input type="radio" name="q5answers" id="q5answera" value="A" />
-                        <label for="q5answera">A. Option 1</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="q5answers" id="q5answerb" value="B" />
-                        <label for="q5answerb">B. Option 2</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="q5answers" id="q5answerc" value="C" />
-                        <label for="q5answerc">C. Option 3</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="q5answers" id="q5answerd" value="D" />
-                        <label for="q5answerd">D. Option 4</label>
-                    </div>
-                    <button type="button" onclick="">Save Answer</button>
-                </li>
-            </ol>
-            <button type="button" onclick="">Save All</button>
-            <button type="button" onclick="">Previous Page</button>
-            <button type="button" onclick="">Next Page</button>
-            <input type="submit" value="Submit">
-        </form>
-        <p>Page 2 of 3</p>
+        <div class="wrapper">
+            <nav id="bcitnav">
+                <a href="#">BCIT</a>
+                <a href="#">myBcit</a>
+                <a href="#">D2l</a>
+            </nav>
+                
+            <nav id="classes-days">
+                <div class="classes-days-content">
+                    <h1>COMP 1950 Classes:</h1>
+                    <a href="#">Tuesday</a>
+                    <a href="#">Thursday</a>
+                    <a href="#">Six Week</a>	
+                </div>
+            </nav>
+
+            <header>
+                <a href="#"><img src="images/bcitlogo.png" alt="BCIT Logo" id="bcitlogo"></a>
+                <div id="headertext">
+                    <h2>COMP 1950</h2>
+                    <h2>Web Development And Design 2</h2>
+                    <h1>Home</h1>
+                </div>
+                <a href="#" class="sign-in">Sign In</a>
+            </header>
+
+            <aside id="accordion">
+                <div class="my-sidbar">
+                        <h3>Lectures</h3>
+                        <div>
+                            <ul>
+                                <li><a href="lecture1.html">1: Tools and Standards</a></li>
+                                <li><a href="#">2: HTML 5</a></li>
+                                <li><a href="#">3:Advanced CSS</a></li>
+                                <li><a href="#">4: CSS Layouts</a></li>
+                                <li><a href="#">5: Responsive design</a></li>
+                                <li><a href="#">6: CSS3</a></li>
+                                <li><a href="#">7: Javascript Frameworks</a></li>
+                                <li><a href="#">8: Server Architecture</a></li>
+                                <li><a href="#">9: Templates, Tools</a></li>
+                                <li><a href="#">10: Methodology</a></li>
+                            </ul>
+                        </div>
+
+                        <h3>Resources</h3>
+                            <div></div>
+                        <h3>Home</h3>	
+                            <div></div>
+                        <h3>About</h3>
+                            <div></div>
+                </div>
+            </aside>
+
+            <article>
+                <form action="" method="post" id="quiz">
+                    <ol>
+                        <li>
+                            <h3>Here is a question with multiple choice answers. Pick one.</h3>
+                            <div>
+                                <input type="radio" name="q1answers" id="q1answera" value="A" />
+                                <label for="q1answera">A. Option 1</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q1answers" id="q1answerb" value="B" />
+                                <label for="q1answerb">B. Option 2</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q1answers" id="q1answerc" value="C" />
+                                <label for="q1answerc">C. Option 3</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q1answers" id="q1answerd" value="D" />
+                                <label for="q1answerd">D. Option 4</label>
+                            </div>
+                            <button type="button" onclick="">Save Answer</button>
+                        </li>
+                        <li name="question2">
+                            <h3>Here is a multipick list. Pick up to three choices.</h3>
+                            <div>
+                                <input type="checkbox" name="q2answers1" onClick="return KeepCount()" value="A">Option 1<br>
+                                <input type="checkbox" name="q2answers2" onClick="return KeepCount()" value="B">Option 2<br>
+                                <input type="checkbox" name="q2answers3" onClick="return KeepCount()" value="C">Option 3<br>
+                                <input type="checkbox" name="q2answers4" onClick="return KeepCount()" value="D">Option 4<br>
+                                <input type="checkbox" name="q2answers5" onClick="return KeepCount()" value="E">Option 5<br>
+                                <input type="checkbox" name="q2answers6" onClick="return KeepCount()" value="F">Option 6<br>
+                                <input type="checkbox" name="q2answers7" onClick="return KeepCount()" value="G">Option 7<br>
+                            </div>
+                            <button type="button" onclick="">Save Answer</button>
+                        </li>
+                        <li>
+                            <h3>Fill in the blank. I am answering a _____________ </h3>
+                            <input type"text" name="q3answer"><br>
+                            <button type="button" onclick="">Save Answer</button>
+                        </li>
+                        <li>
+                            <h3>Here is a question with multiple choice answers. Pick one.</h3>
+                            <div>
+                                <input type="radio" name="q4answers" id="q4answera" value="A" />
+                                <label for="q4answera">A. Option 1</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q4answers" id="q4answerb" value="B" />
+                                <label for="q4answerb">B. Option 2</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q4answers" id="q4answerc" value="C" />
+                                <label for="q4answerc">C. Option 3</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q4answers" id="q4answerd" value="D" />
+                                <label for="q4answerd">D. Option 4</label>
+                            </div>
+                            <button type="button" onclick="">Save Answer</button>
+                        </li>
+                        <li>
+                            <h3>Here is a question with multiple choice answers. Pick one.</h3>
+                            <div>
+                                <input type="radio" name="q5answers" id="q5answera" value="A" />
+                                <label for="q5answera">A. Option 1</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q5answers" id="q5answerb" value="B" />
+                                <label for="q5answerb">B. Option 2</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q5answers" id="q5answerc" value="C" />
+                                <label for="q5answerc">C. Option 3</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q5answers" id="q5answerd" value="D" />
+                                <label for="q5answerd">D. Option 4</label>
+                            </div>
+                            <button type="button" onclick="">Save Answer</button>
+                        </li>
+                    </ol>
+                    <button type="button" onclick="">Save All</button>
+                    <button type="button" onclick="">Previous Page</button>
+                    <button type="button" onclick="">Next Page</button>
+                    <input type="submit" value="Submit">
+                </form>
+                <p>Page 2 of 3</p>
+            </article>
+        </div>
     </body>
     <script language="javascript">
 
