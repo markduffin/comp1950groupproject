@@ -1,0 +1,100 @@
+@import url("reset.css");
+#classes-days{
+  background-image: url("../images/classes-days-banner.png");
+  background-repeat: repeat;
+  background-position: center;
+  padding: 2em 0.8em 2em 0.8em;
+  color: #cee0ed;
+}
+.classes-days-content {
+  display: inline-flex;
+  margin-left: 300px;
+}
+.classes-days-content a {
+  margin: 5px;
+  text-decoration: none;
+  color: #cee0ed;
+}
+.classes-days-content h1 {
+  margin: 5px;
+}
+body {
+  background-color: #cee0ed;
+}
+aside:nth-of-type(1) {
+	background-color: #9b59b6;
+	padding: 20px;
+}
+main {
+	background-color: #34495e;
+	padding: 20px;
+}
+footer {
+	background-color: #e67e22;
+	padding: 20px;
+}
+.wrapper {
+	background-color: white;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+/* Grid Styles ------*/
+.wrapper {
+  display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	/* grid-auto-rows: minmax(45px, auto); */
+	grid-template-areas:
+    "nav      nav    nav"
+    "header   header header"
+		"sidebar1  main   main"
+		"footer   footer footer";
+}
+header {
+	grid-area: header; 
+}
+.sign-in {
+	float: right;
+}
+nav {
+  grid-area: nav;
+}
+aside:nth-of-type(1) {
+	grid-area: sidebar1;
+	position: fixed;
+	width: 10vw;
+	grid-template-rows: 10vw auto;
+}
+main {
+	grid-area: main;
+	grid-template-columns: 10vw auto;
+}
+article{
+	grid-column-start: 2;
+}
+footer {
+  grid-area: footer;
+}
+.my-sidbar {
+	grid-row-start: 3;
+}
+/* End Grid Style */
+footer {
+  background-color: #676767;
+    color: white;
+    padding: 20px;
+
+}
+
+
+/* Change layout to a mobile layout */
+@media screen and (max-width: 640px) {
+	.wrapper {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"nav      nav"
+			"header   header"
+			"sidebar sidebar"
+			"main     main"
+			"footer   footer";
+	}
+}
