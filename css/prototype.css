@@ -1,161 +1,430 @@
 @import url("reset.css");
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	color: blue;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
 
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-#classes-days{
+#classes-days {
   color: #cee0ed;
 }
+
 .classes-days-content {
   display: inline-flex;
   margin-left: 300px;
 }
+
 .classes-days-content a {
   margin: 5px;
   text-decoration: none;
   color: #cee0ed;
 }
+
 .classes-days-content h1 {
   margin: 5px;
 }
+
 body {
   background-color: #cee0ed;
 }
+
 aside:nth-of-type(1) {
-	background-color: #9b59b6;
-	padding: 20px;
+  background-color: darkblue;
+  padding: 20px;
 }
+
 main {
-	background-color: #34495e;
-	padding: 20px;
+  background-color: darkblue;
+  padding: 20px;
 }
+
 footer {
-	background-color: #e67e22;
-	padding: 20px;
+  background-color: darkblue;
+  padding: 20px;
 }
+
 .wrapper {
-	background-color: white;
-	max-width: 1100px;
-	margin: 0 auto;
+  background-color: darkblue;
+  max-width: 1100px;
+  margin: 0 auto;
 }
+
+#accordion h3 {
+	color: white;
+}
+
 /* Grid Styles ------*/
 .wrapper {
   display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
-	grid-auto-rows: minmax(20px, auto); 
-	grid-template-areas:
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-auto-rows: minmax(20px, auto);
+	grid-template-areas: 
 		"bcitnav bcitnav bcitnav"
-    "classesdays classesdays classesdays"
-    "header   header header"
+		"classesdays classesdays classesdays"
+		"header   header header"
 		"sidebar1  main   main"
 		"footer   footer footer";
 }
+
 header {
-	grid-area: header; 
-	background-image: url("../images/classes-days-banner.png");
+  grid-area: header;
+  background-image: url("../images/classes-days-banner.png");
   background-repeat: repeat;
   background-position: center;
-	padding: 4px;
-	display: grid;
-	grid-template-columns: 10% 80% 10%;
-	grid-template-areas:
-		"bcitlogo headertext signin"
+  padding: 4px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-areas: "bcitlogo headertext signin";
 }
 
 #bcitlogo {
-	grid-area: bcitlogo;
+  grid-area: bcitlogo;
 }
 
 #headertext {
-	grid-area: headertext;
+  grid-area: headertext;
+  color: white;
 }
 
 #headertext h2 {
-	font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 #headertext h1 {
-	font-size: 1.9em;
+  font-size: 1.9em;
 }
 
 .sign-in {
-	grid-area: signin;
-	text-align: center;
-	align-self: center;
-	float: right;
-	background-color: white;
-	border-radius: 2px;
+  grid-area: signin;
+  text-align: center;
+  align-self: center;
+  float: right;
+  background-color: white;
+  border-radius: 2px;
 	text-decoration: none;
-	padding: 5px;
-	text-transform: uppercase;
-	box-shadow: -1pt 1pt black;
+	font-weight: bold;
+  padding: 5px;
+  text-transform: uppercase;
+  box-shadow: -1pt 1pt black;
 }
 
 .sign-in:hover, .sign-in:active {
-	background-color: grey;
+  background-color: grey;
+}
+
+#accordion ul {
+  position: relative;
+  overflow: auto;
 }
 
 #bcitnav {
-	grid-area: bcitnav;
-	display: flex;
-	flex-direction: row-reverse;
-	background-color: black;
+  grid-area: bcitnav;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: black;
 }
 
 #bcitnav a {
-	padding: 1px 5px 0 5px;
+	padding: 5px;
+	color: white;
 }
 
 #classes-days {
-	grid-area: classesdays;
-	display: flex;
-	flex-direction: row-reverse;
-	background-color: orange;
-	color: white;
+  grid-area: classesdays;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: darkblue;
+  color: white;
 }
+
 aside:nth-of-type(1) {
-	grid-area: sidebar1;
-	margin-top: 157px;
-	width: 10vw;
-	grid-template-rows: 10vw auto;
-	position: fixed;
-	display: inline-block;
-	height: auto;
-	clear: both;
+  grid-area: sidebar1;
+  margin-top: 163px;
+  position: fixed;
+  display: inline-block;
+  height: auto;
+  clear: both;
 }
-main {
-	grid-area: main;
-	grid-template-columns: 10vw auto;
+
+aside:nth-of-type(1) ul {
+	list-style: none;
+	padding: 2px 5px;
+  font-size: 0.8em;
 }
-article{
-	grid-column-start: 2;
+
+aside:nth-of-type(1) a {
+	color: #89898e;
 }
+
+article {
+  grid-area: main;
+}
+
 footer {
   grid-area: footer;
 }
-.my-sidbar {
-	grid-row-start: 3;
-}
+
 /* End Grid Style */
-footer {
-  background-color: #676767;
-  color: white;
-	padding: 20px;
-	text-align: center;
+
+.contblock {
+	border: 1pt solid black;
+	padding: 10px;
+	margin: 0 0 10px 0;
 }
 
+.contblock:first-of-type {
+	background-color: darkslategrey;
+	color: white;
+}
+
+.contblock:first-of-type a {
+	color: white;
+}
+
+.contblock:last-of-type {
+	background-color: darkred;
+	color: black;
+}
+
+.contblock ol {
+	padding: 2px 35px;
+}
+
+article h2 {
+	padding: 2px;
+	text-transform: uppercase;
+}
+
+article {
+	background-color: white;
+	padding: 15px;
+}
+
+article ul {
+  padding: 5px 0 5px 50px;
+}
+
+footer {
+  background-color: darkblue;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+	color: white;
+}
+
+#notice {
+	background-color: darkred;
+	padding: 15px;
+	margin: 5px 5px 10px 5px;
+	box-shadow: -1pt 1pt black;
+}
+
+#notice a {
+	color: darkblue;
+}
+
+#article p {
+	padding: 10px 0;
+}
+
+#quiz {
+  border: 1pt solid #ddd;
+}
+
+#quiz h1 {
+  font-size: 1.8em;
+  padding: 5px;
+}
+
+#quiz ol {
+  padding: 5px 25px;
+}
+
+#quiz ol li {
+  padding: 10px 0;
+}
+
+#quiz ol li h3 {
+  padding: 0 0 3px 0;
+}
+
+#quiz ol li input {
+  margin: 5px 0;
+}
+
+#quiz ol li label {
+  margin-right: 10px;
+}
+
+#quizbuttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "quizpagebuttons quizendbuttons";
+}
+
+form p:last-of-type {
+  text-align: right;
+  padding: 2px;
+}
+
+#quizbuttons div button, #quizbuttons div input {
+  margin: 0 2px;
+}
+
+#quizbuttons div {
+  padding: 0 0 5px 5px;
+}
+
+#quizbuttons div:first-of-type {
+  grid-area: quizpagebuttons;
+  display: flex;
+}
+
+#quizbuttons div:last-of-type {
+  grid-area: quizendbuttons;
+  display: flex;
+  flex-direction: row-reverse;
+}
 
 /* Change layout to a mobile layout */
 @media screen and (max-width: 640px) {
-	.wrapper {
-		grid-template-columns: repeat(2, 1fr);
+  .wrapper {
+    grid-template-columns: 1fr;
 		grid-template-areas:
-			"nav      nav"
-			"header   header"
-			"sidebar sidebar"
-			"main     main"
-			"footer   footer";
+			"bcitnav"
+			"classesdays"
+			"header"
+			"sidebar1"
+			"main"
+			"footer";
 	}
+
+	#bcitnav {
+		flex-direction: row;
+	}
+
+	#classes-days {
+		flex-direction: row;
+	}
+
+	.classes-days-content {
+		margin-left: 0px;
+	}
+
+	article {
+		width: auto;
+	}
+
+	#headertext {
+		padding-left: 3px;
+		font-size: 0.6em;
+	}
+
+	.sign-in {
+		float: none;
+		padding: 5px 0;
+	}
+
+	aside:nth-of-type(1) {
+		position: unset;
+		margin-top: 0;
+	}
+}
+
+@media print {
+  .wrapper {
+		margin: 0;
+    display: grid;
+    grid-template-columns: auto;
+		grid-template-areas: 
+				"header"
+				"sidebarnav"
+				"body";
+  }
+  #bcitnav, #classes-days, footer, img, .sign-in {
+    display: none;
+  }
+  header {
+    grid-area: header;
+    background-image: none;
+    padding: 5px;
+    display: inline-block;
+  }
+  #headertext {
+    color: black;
+  }
+  header h2 {
+    font-size: 0.8em;
+  }
+  header h1 {
+    font-size: 1.2em;
+  }
+  article {
+    grid-area: body;
+    padding: 15px;
+  }
+  #quiz {
+    border: none;
+  }
+  aside:nth-of-type(1) {
+    grid-area: sidebarnav;
+    font-size: 0.8em;
+    margin-top: 0;
+    width: auto;
+    position: unset;
+    display: inline-block;
+    height: auto;
+    clear: both;
+  }
+  #accordion {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "lectures resources home about"
+ "lecturessubheader . . .";
+  }
+  #accordion h3:nth-of-type(1) {
+    grid-area: lectures;
+  }
+  #accordion h3:nth-of-type(2) {
+    grid-area: resources;
+  }
+  #accordion h3:nth-of-type(3) {
+    grid-area: home;
+  }
+  #accordion h3:nth-of-type(4) {
+    grid-area: about;
+  }
+  #accordion div:first-of-type {
+    grid-area: lecturessubheader;
+  }
+  #quiz ol {
+    font-size: 0.7em;
+  }
+  #quiz h1 {
+    font-size: 0.9em;
+  }
+  #quiz button {
+    display: none;
+  }
+  #quiz input[value="Submit"] {
+    display: none;
+  }
 }

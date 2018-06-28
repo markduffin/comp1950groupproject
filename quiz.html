@@ -6,11 +6,15 @@ Author: Mark & Ladan
 	<head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="This is a sample of what a quiz could look like on the new site." />
         <title>Comp 1950 | Quiz</title>
-        <link rel="stylesheet" href="css/prototype.css">
+        <link rel="stylesheet" href="/students/mduffin/groupproject/css/prototype.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="/students/mduffin/groupproject/js/accordion.js"></script>
 	</head>
 	<body>
-        <div class="wrapper">
+        <div class="wrapper" id="top">
             <nav id="bcitnav">
                 <a href="#">BCIT</a>
                 <a href="#">myBcit</a>
@@ -27,7 +31,7 @@ Author: Mark & Ladan
             </nav>
 
             <header>
-                <a href="#"><img src="images/bcitlogo.png" alt="BCIT Logo" id="bcitlogo"></a>
+                <a href="#"><img src="/students/mduffin/groupproject/images/bcitlogo.png" alt="BCIT Logo" id="bcitlogo"></a>
                 <div id="headertext">
                     <h2>COMP 1950</h2>
                     <h2>Web Development And Design 2</h2>
@@ -37,34 +41,39 @@ Author: Mark & Ladan
             </header>
 
             <aside id="accordion">
-                <div class="my-sidbar">
-                        <h3>Lectures</h3>
-                        <div>
-                            <ul>
-                                <li><a href="lecture1.html">1: Tools and Standards</a></li>
-                                <li><a href="#">2: HTML 5</a></li>
-                                <li><a href="#">3:Advanced CSS</a></li>
-                                <li><a href="#">4: CSS Layouts</a></li>
-                                <li><a href="#">5: Responsive design</a></li>
-                                <li><a href="#">6: CSS3</a></li>
-                                <li><a href="#">7: Javascript Frameworks</a></li>
-                                <li><a href="#">8: Server Architecture</a></li>
-                                <li><a href="#">9: Templates, Tools</a></li>
-                                <li><a href="#">10: Methodology</a></li>
-                            </ul>
-                        </div>
+                <h3>Lectures</h3>
+                <ul>
+                    <li><a href="/students/mduffin/groupproject/lecture1.html">1: Tools and Standards</a></li>
+                    <li><a href="#">2: HTML 5</a></li>
+                    <li><a href="#">3:Advanced CSS</a></li>
+                    <li><a href="#">4: CSS Layouts</a></li>
+                    <li><a href="#">5: Responsive design</a></li>
+                    <li><a href="#">6: CSS3</a></li>
+                    <li><a href="#">7: Javascript Frameworks</a></li>
+                    <li><a href="#">8: Server Architecture</a></li>
+                    <li><a href="#">9: Templates, Tools</a></li>
+                    <li><a href="#">10: Methodology</a></li>
+                </ul>
 
-                        <h3>Resources</h3>
-                            <div></div>
-                        <h3>Home</h3>	
-                            <div></div>
-                        <h3>About</h3>
-                            <div></div>
-                </div>
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+
+                <h3>Home</h3>
+                <ul>
+                    <li><a href="/students/mduffin/groupproject/template.html">Home</a></li>
+                </ul>
+
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                </ul>
             </aside>
 
             <article>
                 <form action="" method="post" id="quiz">
+                    <h1>Sample Quiz</h1>
                     <ol>
                         <li>
                             <h3>Here is a question with multiple choice answers. Pick one.</h3>
@@ -89,13 +98,13 @@ Author: Mark & Ladan
                         <li name="question2">
                             <h3>Here is a multipick list. Pick up to three choices.</h3>
                             <div>
-                                <input type="checkbox" name="q2answers1" onClick="return KeepCount()" value="A">Option 1<br>
-                                <input type="checkbox" name="q2answers2" onClick="return KeepCount()" value="B">Option 2<br>
-                                <input type="checkbox" name="q2answers3" onClick="return KeepCount()" value="C">Option 3<br>
-                                <input type="checkbox" name="q2answers4" onClick="return KeepCount()" value="D">Option 4<br>
-                                <input type="checkbox" name="q2answers5" onClick="return KeepCount()" value="E">Option 5<br>
-                                <input type="checkbox" name="q2answers6" onClick="return KeepCount()" value="F">Option 6<br>
-                                <input type="checkbox" name="q2answers7" onClick="return KeepCount()" value="G">Option 7<br>
+                                <input type="checkbox" name="q2answers1" onClick="return KeepCount()" value="A"> Option 1<br>
+                                <input type="checkbox" name="q2answers2" onClick="return KeepCount()" value="B"> Option 2<br>
+                                <input type="checkbox" name="q2answers3" onClick="return KeepCount()" value="C"> Option 3<br>
+                                <input type="checkbox" name="q2answers4" onClick="return KeepCount()" value="D"> Option 4<br>
+                                <input type="checkbox" name="q2answers5" onClick="return KeepCount()" value="E"> Option 5<br>
+                                <input type="checkbox" name="q2answers6" onClick="return KeepCount()" value="F"> Option 6<br>
+                                <input type="checkbox" name="q2answers7" onClick="return KeepCount()" value="G"> Option 7<br>
                             </div>
                             <button type="button" onclick="">Save Answer</button>
                         </li>
@@ -145,53 +154,23 @@ Author: Mark & Ladan
                             <button type="button" onclick="">Save Answer</button>
                         </li>
                     </ol>
-                    <button type="button" onclick="">Save All</button>
-                    <button type="button" onclick="">Previous Page</button>
-                    <button type="button" onclick="">Next Page</button>
-                    <input type="submit" value="Submit">
+                    <div id="quizbuttons">
+                        <div>
+                            <button type="button" onclick="">Previous Page</button>
+                            <button type="button" onclick="">Next Page</button>
+                        </div>
+                        <div>
+                            <input type="submit" value="Submit">
+                            <button type="button" onclick="">Save All</button>
+                        </div>
+                    </div>
+                    <p>Page 2 of 3</p>
                 </form>
-                <p>Page 2 of 3</p>
             </article>
         </div>
+        <footer>
+            <p><a href="#top">Top Of Page</a></p>
+            <p><a href="http://validator.w3.org/check/referer" rel="nofollow" title="Validate as HTML5">Validate HTML</a></p>
+        </footer>
     </body>
-    <script language="javascript">
-
-        function KeepCount() {
-            var NewCount = 0
-            
-            if (document.quiz.question2.q2answers1.checked){
-                NewCount = NewCount + 1
-            }
-            
-            if (document.quiz.question2.q2answers2.checked){
-                NewCount = NewCount + 1
-            }
-            
-            if (document.quiz.question2.q2answers3.checked){
-                NewCount = NewCount + 1
-            }
-            
-            if (document.quiz.question2.q2answers4.checked){
-                NewCount = NewCount + 1
-            }
-            
-            if (document.quiz.question2.q2answers5.checked){
-                NewCount = NewCount + 1
-            }
-
-            if (document.quiz.question2.q2answers6.checked){
-                NewCount = NewCount + 1
-            }
-
-            if (document.quiz.question2.q2answers7.checked){
-                NewCount = NewCount + 1
-            }
-            
-            if (NewCount == 4)
-            {
-            alert('Please only pick up to three options for this question.')
-            document.quiz; return false;
-            }
-        } 
-    </script>
 </html>
